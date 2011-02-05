@@ -1,0 +1,45 @@
+
+Instructions for creating custom fixes:
+
+################################################################################################
+
+All custom fixes must be saved as SQL files in this repository.
+This ensures consistency, readability, and centralization of important information.
+
+The format is as follows:
+
+################################################################################################
+
+NAMING:
+
+xxx_db-name_table-name.sql
+
+xxx = a unique ID for every update, the ID of the last update + 1
+db-name = the database it should be applied to; options: world, characters, realmd, scripts
+table-name = if fix only affects one table, put the name of the table here
+
+EXAMPLES:
+005_world_item_template.sql
+076_characters.sql
+
+################################################################################################
+
+CONTENTS:
+
+All fixes should be commented. Here is an example of a fix:
+
+005_world_item_template.sql
+
+*****************************************************************************
+
+-- 005_world_item_template.sql
+
+-- Database: world
+-- Tables affected: item_template
+-- Description: fixes a problem with items having wrong display ID
+-- Authors: Wolfy, Calibur
+-- Date: March 27th, 2010
+
+UPDATE `item_template` SET `DisplayID` = '350' WHERE `DisplayID` = '6894';
+
+*****************************************************************************
