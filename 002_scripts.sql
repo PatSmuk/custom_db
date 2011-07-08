@@ -7,7 +7,7 @@
 -- Date: July 7th, 2011
 -- Changelog:
 
-DROP TABLE `level_npc_items`;
+DROP TABLE IF EXISTS `level_npc_items`;
 CREATE TABLE `level_npc_items` (
   `class` tinyint(3) NOT NULL,
   `itemId` mediumint(8) NOT NULL
@@ -105,7 +105,7 @@ INSERT INTO `level_npc_items` (`class`, `itemId`) VALUES
 (3, 15269),
 (3, 3039);
 
-DROP TABLE `level_npc_players`;
+DROP TABLE IF EXISTS `level_npc_players`;
 CREATE TABLE `level_npc_players` (
   `guid` int(11) NOT NULL COMMENT 'The player''s GUID',
   PRIMARY KEY (`guid`)
