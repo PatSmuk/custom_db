@@ -4,9 +4,10 @@
 -- Tables affected: playercreateinfo_spell, playercreateinfo_item, item_template (r2)
 -- Description: gives all new players epic mounts
 -- Authors: Wolfy
--- Date: January 2nd, 2011, February 5th, 2011 (r2)
+-- Date: January 2nd, 2011, February 5th, 2011 (r2), July 7th, 2011 (r3)
 -- Changelog:
 --   - r2: fix item requirements on the mount so players < 60 can use it
+--   - r3: add bags to all players (item ID 4497)
 
 DELETE FROM playercreateinfo_spell WHERE Spell IN ('33388', '33391');
 INSERT INTO `playercreateinfo_spell` (`race`, `class`, `Spell`, `Note`) VALUES
@@ -108,5 +109,56 @@ INSERT INTO `playercreateinfo_item` (`race`, `class`, `itemid`, `amount`) VALUES
 ('8', '5', '19902', '1'),
 ('8', '7', '19902', '1'),
 ('8', '8', '19902', '1');
+
+DELETE FROM playercreateinfo_item WHERE itemid = '4497';
+INSERT INTO `playercreateinfo_item` (`race`, `class`, `itemid`, `amount`) VALUES
+(1, 1, 4497, 1),
+(1, 2, 4497, 1),
+(1, 4, 4497, 1),
+(1, 5, 4497, 1),
+(1, 8, 4497, 1),
+(1, 9, 4497, 1),
+
+(2, 1, 4497, 1),
+(2, 3, 4497, 1),
+(2, 4, 4497, 1),
+(2, 7, 4497, 1),
+(2, 9, 4497, 1),
+
+(3, 1, 4497, 1),
+(3, 2, 4497, 1),
+(3, 3, 4497, 1),
+(3, 4, 4497, 1),
+(3, 5, 4497, 1),
+
+(4, 1, 4497, 1),
+(4, 3, 4497, 1),
+(4, 4, 4497, 1),
+(4, 5, 4497, 1),
+(4, 11, 4497, 1),
+
+(5, 1, 4497, 1),
+(5, 4, 4497, 1),
+(5, 5, 4497, 1),
+(5, 8, 4497, 1),
+(5, 9, 4497, 1),
+
+(6, 1, 4497, 1),
+(6, 3, 4497, 1),
+(6, 7, 4497, 1),
+(6, 11, 4497, 1),
+
+(7, 1, 4497, 1),
+(7, 4, 4497, 1),
+(7, 8, 4497, 1),
+(7, 9, 4497, 1),
+
+(8, 1, 4497, 1),
+(8, 3, 4497, 1),
+(8, 4, 4497, 1),
+(8, 5, 4497, 1),
+(8, 7, 4497, 1),
+(8, 8, 4497, 1);
+
 
 UPDATE item_template SET RequiredLevel = 1 WHERE entry = 19902;
