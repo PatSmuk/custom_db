@@ -113,10 +113,8 @@ INSERT INTO level_npc_items VALUES
 (7,15599),
 (7,13095),
 (7,12012),
-(7,9401),
-(7,9401),
-(7,9426),
-(7,13138),
+(7,13026),
+(7,7726),
 -- Mages
 (8,7720),
 (8,7722),
@@ -188,4 +186,4 @@ REPLACE INTO `gossip_texts` (`entry`, `content_default`, `content_loc1`, `conten
 (-3999001, 'Sure, count me in!', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'npc_leveling OPTION_LEVEL'),
 (-3999002, 'Sure, and I want to be feral!', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'npc_leveling OPTION_DRUID_FERAL'),
 (-3999003, 'Yes, but I don''t want to be feral!', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'npc_leveling OPTION_DRUID_RESTO'),
-(-3999003, 'Certainly, Gary.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'npc_leveling OPTION_TELEPORT');
+(-3999004, 'Certainly, Gary.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'npc_leveling OPTION_TELEPORT');
